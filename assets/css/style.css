@@ -4,6 +4,10 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+header,
+footer {
+  margin: 0;
+}
 
 .body {
     display: flex;
@@ -73,7 +77,7 @@
     /* border: 1px dotted black; */
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: .5rem;
     flex: 1;
     .hero {
         width: 100%;
@@ -962,6 +966,99 @@ footer {
 .menu-icon {
   width: 1.8rem;
   height: 1.8rem;
-  filter: brightness(0) invert(1);
+  filter: brightness(1) invert(0);
   cursor: pointer;
+  transition: transform 0.4s ease;
 }
+
+.menu-icon:hover {
+  transform: rotate(180deg) scale(1.1);
+}
+
+.footer-newgen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  background-color: #1a1a1a;
+  color: white;
+  font-family: sans-serif;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-newgen-left h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer-newgen-left span {
+  font-weight: normal;
+  opacity: 0.8;
+}
+
+.footer-newgen-center p {
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.footer-newgen-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-newgen-right p {
+  margin: 0;
+}
+
+.social-btns-newgen {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.btn-newgen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px -5px #00000022;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.35s ease-in-out;
+}
+
+.btn-newgen::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: 90%;
+  left: -110%;
+  background-color: var(--color);
+  transform: rotate(45deg);
+  transition: all 0.35s ease-in-out;
+}
+
+.btn-newgen:hover::before {
+  top: -10%;
+  left: -10%;
+}
+
+.btn-newgen ion-icon {
+  font-size: 1.2rem;
+  color: var(--color);
+  transition: all 0.35s ease-in-out;
+  z-index: 1;
+}
+
+.btn-newgen:hover ion-icon {
+  color: white;
+  transform: scale(1.2);
+}
+
